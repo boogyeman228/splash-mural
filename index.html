@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#231f4a">
+  <title>Splash Mural</title>
+  <link rel="icon" href="data:,">
+  <link rel="preload" href="assets/fonts/fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <header id="top">
+    <button id="b-menu" class="ib" aria-label="Menu">&#9776;</button>
+    <button id="b-daily" class="ib" aria-label="Daily mural">&#128197;</button>
+    <div id="title"><b id="t-mural">Splash Mural</b><span id="t-level">Level 1</span></div>
+    <div id="drops" class="pill" aria-label="Paint drops"><i class="drop"></i><b id="drops-n">0</b></div>
+  </header>
+
+  <footer id="tools">
+    <button class="tool" id="t-undo"><span class="ic">&#8630;</span><span class="lb">Undo</span><i class="bd" id="bd-undo"></i></button>
+    <button class="tool" id="t-hint"><span class="ic">&#128161;</span><span class="lb">Hint</span><i class="bd" id="bd-hint"></i></button>
+    <button class="tool" id="t-tube"><span class="ic">&#10010;</span><span class="lb">Tube</span><i class="bd" id="bd-tube"></i></button>
+    <button class="tool" id="t-restart"><span class="ic">&#8635;</span><span class="lb">Restart</span><i class="bd free">free</i></button>
+  </footer>
+
+  <div id="modal" class="modal" hidden>
+    <div class="card" role="dialog" aria-modal="true" aria-labelledby="m-title">
+      <h2 id="m-title"></h2>
+      <div id="m-media"></div>
+      <p id="m-text"></p>
+      <div class="m-row">
+        <button id="m-free" class="btn"></button>
+        <button id="m-reward" class="btn reward" hidden></button>
+      </div>
+      <div id="m-more"></div>
+    </div>
+  </div>
+  <div id="toast" role="status"></div>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
